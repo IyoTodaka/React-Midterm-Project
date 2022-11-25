@@ -2,6 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import axios from 'axios'
+import IntroStop from './components/IntroStop'
+import IntroMove from './components/IntroMove'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,7 +26,8 @@ function App() {
         </header>
         <div className="card-image">
           <figure className="image is-4by3">
-            <img src="images/スズメ1.jpg" alt="イメージ" />
+            {/* <img src="images/スズメ1.jpg" alt="イメージ" /> */}
+            <IntroStop />
           </figure>
         </div>
         <div className="card-content">
@@ -33,7 +36,7 @@ function App() {
             ここにコンテンツを記載します。
           </div>
         </div>
-          <div class="buttons">
+          <div className="buttons">
             <button className="button1 is-primary">Primary</button>
             <button className="button2 is-primary">Primary</button>
             <button className="button3 is-primary">Primary</button>
