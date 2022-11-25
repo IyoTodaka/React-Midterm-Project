@@ -1,3 +1,7 @@
+
+import { createRoot } from 'react-dom/client';
+import React from 'react'
+
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
@@ -5,7 +9,7 @@ import axios from 'axios'
 import IntroStop from './components/IntroStop'
 import IntroMove from './components/IntroMove'
 import './style/IntroMove.css'
-import './style/IntroStop.css'
+// import './style/IntroStop.css'
 import 'bulma/css/bulma.min.css'
 
 function App() {
@@ -27,6 +31,19 @@ let playList
     
     console.log(playList);
   })
+  const clickEvent = ()=>{
+    const imagePath="./music/zelda1.jpg"
+    const imgTag =(
+      <img src={imagePath} />
+    )
+    let root = createRoot(document.getElementById('imgDev'))
+    root.unmount()
+    // ReactDom.render(imgTag,document.getElementById('imgDev'))
+    root = createRoot(document.getElementById('imgDev'))
+    root.render(imgTag,document.getElementById('imgDev'))
+    document.getElementById('button3').className = 'button is-danger'
+    
+  }
 
   return (
     <div className="App">
@@ -36,26 +53,26 @@ let playList
           Retro Game Background Music
           </h2>
         {/* </header> */}
-        <div className="card-image">
+        <div id="imgDev" className="card-image">
           {/* <figure className="image is-4by3"> */}
             {/* <img src="images/スズメ1.jpg" alt="イメージ" /> */}
-            <IntroStop />
+            <IntroMove />
           {/* </figure> */}
         </div>
         <div className="card-content">
           <div className="content">
-            <h4>Press the Start button</h4>
+            <h4>Which is the title of this game?</h4>
            
           </div>
         </div>
           <div >
             <div className="buttons">
-              <button className="button is-primary" id ="button1">Final Fantasy VII</button>
-              <button className="button is-primary" id ="button2">ActRaiser</button>
+              <button className="button is-primary" id ="button1" onClick={clickEvent}>Final Fantasy VII</button>
+              <button className="button is-primary" id ="button2"onClick={clickEvent}>ActRaiser</button>
             </div>
             <div className="buttons">
-              <button className="button is-primary" id ="button3">Zelda</button>
-              <button className="button is-primary" id ="button4">Diablo II</button>
+              <button className="button is-primary" id ="button3"onClick={clickEvent}>Zelda</button>
+              <button className="button is-primary" id ="button4"onClick={clickEvent}>Diablo II</button>
             </div>
           </div>
       </div>
@@ -64,4 +81,3 @@ let playList
 }
 
 export default App
-
