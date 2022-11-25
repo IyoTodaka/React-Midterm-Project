@@ -45,19 +45,17 @@ let playList
         <div className="card-content">
           <div className="content">
             <h4>Press the Start button</h4>
-            <button className='button is-danger is-light' id='start-button' onClick={() => getPlayListUrl()}>
-              <strong>START</strong>
-            </button>
+           
           </div>
         </div>
           <div >
             <div className="buttons">
-              <button className="button is-primary" id ="button1"><column is-6>Final Fantasy VII</column></button>
-              <button className="button is-primary" id ="button2"><column is-6>ActRaiser</column></button>
+              <button className="button is-primary" id ="button1">Final Fantasy VII</button>
+              <button className="button is-primary" id ="button2">ActRaiser</button>
             </div>
             <div className="buttons">
-              <button className="button is-primary" id ="button3"><column is-6>Zelda</column></button>
-              <button className="button is-primary" id ="button4"><column is-6>Diablo II</column></button>
+              <button className="button is-primary" id ="button3">Zelda</button>
+              <button className="button is-primary" id ="button4">Diablo II</button>
             </div>
           </div>
       </div>
@@ -66,3 +64,4 @@ let playList
 }
 
 export default App
+
