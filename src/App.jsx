@@ -19,6 +19,15 @@ function App() {
 
 })
 
+const PLAY_LIST_ID = "PL32RkBdibPYUJglOa1xRhjqcJ2Z8Siczs"
+  const getPlayListUrl = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&key='+import.meta.env.VITE_YOUTUBE_API_KEY+'&playlistId='+PLAY_LIST_ID
+let playList
+  axios.get(getPlayListUrl).then(({data})=>{
+    playList =data.items;
+    
+    console.log(playList);
+  })
+
   return (
     <div className="App">
       <div className = "card">
