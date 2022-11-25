@@ -4,6 +4,9 @@ import './App.css'
 import axios from 'axios'
 import IntroStop from './components/IntroStop'
 import IntroMove from './components/IntroMove'
+import './style/IntroMove.css'
+import './style/IntroStop.css'
+import 'bulma/css/bulma.min.css'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,28 +22,34 @@ function App() {
   return (
     <div className="App">
       <div className = "card">
-        <header className="card-header">
-          <h2 className="card-header-title">
+        {/* <header className="card-header"> */}
+          <h2 className="title">
           Retro Game Background Music
           </h2>
-        </header>
+        {/* </header> */}
         <div className="card-image">
-          <figure className="image is-4by3">
+          {/* <figure className="image is-4by3"> */}
             {/* <img src="images/スズメ1.jpg" alt="イメージ" /> */}
             <IntroStop />
-          </figure>
+          {/* </figure> */}
         </div>
         <div className="card-content">
           <div className="content">
-            <strong>コンテンツ</strong>
-            ここにコンテンツを記載します。
+            <h4>Press the Start button</h4>
+            <button className='button is-danger is-light' id='start-button'>
+              <strong>START</strong>
+            </button>
           </div>
         </div>
-          <div className="buttons">
-            <button className="button1 is-primary">Primary</button>
-            <button className="button2 is-primary">Primary</button>
-            <button className="button3 is-primary">Primary</button>
-            <button className="button4 is-primary">Primary</button>
+          <div >
+            <div className="buttons">
+              <button className="button is-primary" id ="button1">PrimaryPrimaryPrimaryPrimary</button>
+              <button className="button is-primary" id ="button2">PrimaryPrimaryPrimaryPrimary</button>
+            </div>
+            <div className="buttons">
+              <button className="button is-primary" id ="button3">Primary</button>
+              <button className="button is-primary" id ="button4">PrimaryPrimaryPrimaryPrimary</button>
+            </div>
           </div>
       </div>
     </div>

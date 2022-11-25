@@ -40,4 +40,11 @@
   color: #888;
 }
 
+body{
+  background-color: rgb(198, 248, 140, 0.4);
+}
+
+.App{
+  background-color: rgb(217, 228, 237,0.4);
+}
 
