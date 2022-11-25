@@ -1,9 +1,18 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import axios from 'axios'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const GET_URL = 'https://jsonblob.com/api/jsonBlob/1045532953303859200'
+  let quizList;
+  axios.get(GET_URL).then(({data})=>{
+  quizList =data.lists;
+  console.log(quizList);
+
+})
 
   return (
     <div className="App">
@@ -24,12 +33,12 @@ function App() {
             ここにコンテンツを記載します。
           </div>
         </div>
-        <footer className="card-footer">
-          <a href="#" className="card-footer-item">フッター1</a>
-          <a href="#" className="card-footer-item">フッター2</a>
-          <a href="#" className="card-footer-item">フッター3</a>
-          <a href="#" className="card-footer-item">フッター4</a>
-        </footer>
+          <div class="buttons">
+            <button className="button1 is-primary">Primary</button>
+            <button className="button2 is-primary">Primary</button>
+            <button className="button3 is-primary">Primary</button>
+            <button className="button4 is-primary">Primary</button>
+          </div>
       </div>
     </div>
   )
