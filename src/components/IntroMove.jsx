@@ -1,5 +1,5 @@
 import React from 'react'
-
+import cx from "classnames"
 
 
 const IntroMove = () =>{ 
@@ -15,6 +15,7 @@ const IntroMove = () =>{
         </div>
     </>
     )
-
+ 
 }
+
 export default IntroMove
